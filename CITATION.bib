@@ -1,0 +1,17 @@
+@inproceedings{10.1145/3635035.3635046,
+author = {Nakasato, Naohito and Murakami, Yuki and Kono, Fumiya and Nakata, Maho},
+title = {Evaluation of POSIT Arithmetic with Accelerators},
+year = {2024},
+isbn = {9798400708893},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3635035.3635046},
+doi = {10.1145/3635035.3635046},
+abstract = {We present an evaluation of 32-bit POSIT arithmetic through its implementation as accelerators on FPGAs and GPUs. POSIT, a floating-point number format, adaptively changes the size of its fractional part. We developed hardware designs for FPGAs and software for GPUs to accelerate linear algebra operations using Posit(32,2) arithmetic. Our FPGA- and GPU-based accelerators in Posit(32,2) arithmetic significantly accelerated the Cholesky and LU decomposition algorithms for dense matrices. In terms of numerical accuracy, Posit(32,2) arithmetic is approximately 0.5 - 1.0 digits more accurate than the standard 32-bit format, especially when the norm of the elements of the input matrix is close to 1. Evaluating power consumption, we observed that the power efficiency of the accelerators ranged between 0.043 - 0.076 Gflops/watts for the LU decomposition in Posit(32,2) arithmetic. The power efficiency of the latest GPUs as accelerators of Posit(32,2) arithmetic is better than that of the evaluated FPGA chip.},
+booktitle = {Proceedings of the International Conference on High Performance Computing in Asia-Pacific Region},
+pages = {62–72},
+numpages = {11},
+location = {Nagoya, Japan},
+series = {HPCAsia '24}
+}
+
