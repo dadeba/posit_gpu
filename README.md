@@ -1,16 +1,23 @@
-Posit for GPUs
+# Posit for GPUs
 
 1. Clone SoftPosit
- git clone https://gitlab.com/cerlane/SoftPosit.git
+```bash
+$ git clone https://gitlab.com/cerlane/SoftPosit.git
+```
 
 2. Patch and build SoftPosit
- cd SoftPosit
- patch -p1 < ../SoftPosit.patch
- cd build/Linux-x86_64-GCC
- make
+```bash
+$ cd SoftPosit
+$ patch -p1 < ../SoftPosit.patch
+$ cd build/Linux-x86_64-GCC
+$ make
+$ cd ../../..
+```
 
 3. Build 
- make
+```bash
+$ make
+```
 
 # Reference 
 ```bibtex
