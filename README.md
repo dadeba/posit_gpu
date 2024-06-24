@@ -1,6 +1,6 @@
 # GEMM Routines in Posit for GPUs
 
-We have ported the addition and multiplication routines from [SoftPosit](https://gitlab.com/cerlane/SoftPosit.git) as OpenCL kernels. We also created GEMM routines in 32-bit Posit arithmetic. These programs were used for benchmarking in our paper presented at HPC Asia 2024.
+We have ported the addition and multiplication routines from [SoftPosit](https://gitlab.com/cerlane/SoftPosit.git) as OpenCL kernels. We also created GEMM routines in 32-bit Posit arithmetic. These programs were used for benchmarking in [our paper](https://doi.org/10.1145/3635035.3635046) presented at HPC Asia 2024. The paper is also published in [arxiv](https://arxiv.org/abs/2401.14117)
 
 Part of the code is derived from [MPLAPACK](https://github.com/nakatamaho/mplapack).
 
