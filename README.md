@@ -1,23 +1,55 @@
-# Posit for GPUs
+# GEMM Routines in Posit for GPUs
 
-1. Clone SoftPosit
+We have ported the addition and multiplication routines from [SoftPosit](https://gitlab.com/cerlane/SoftPosit.git) as OpenCL kernels. We also created GEMM routines in 32-bit Posit arithmetic. These programs were used for benchmarking in our paper presented at HPC Asia 2024.
+
+Part of the code is derived from [MPLAPACK](https://github.com/nakatamaho/mplapack).
+
+## Build Instructions
+
+1. Clone the SoftPosit repository:
+    ```bash
+    $ git clone https://gitlab.com/cerlane/SoftPosit.git
+    ```
+
+2. Apply the patch and build SoftPosit:
+    ```bash
+    $ cd SoftPosit
+    $ patch -p1 < ../SoftPosit.patch
+    $ cd build/Linux-x86_64-GCC
+    $ make
+    $ cd ../../..
+    ```
+
+3. Build the project:
+    ```bash
+    $ make
+    ```
+
+## Test Programs
+
+All programs use GEMM routines in 32-bit Posit arithmetic. You can specify the blocking size for the GEMM routines through an environment variable.
+
+Example of setting the block size to 16:
 ```bash
-$ git clone https://gitlab.com/cerlane/SoftPosit.git
+$ export OPENCL_GEMM_BLOCKSIZE=16
 ```
 
-2. Patch and build SoftPosit
-```bash
-$ cd SoftPosit
-$ patch -p1 < ../SoftPosit.patch
-$ cd build/Linux-x86_64-GCC
-$ make
-$ cd ../../..
-```
+The performance of all programs can vary slightly depending on the blocking size.
 
-3. Build 
-```bash
-$ make
-```
+## GEMM
+*run_gemm
+*un_gemm_trailing
+
+## LU decomposition
+*run_lu
+*run_lu_bench
+*run_lu_check
+*run_lu_power_bench
+
+## Cholesky decomposition
+*run_cho 
+*run_cho_bench*
+*run_cho_check*
 
 # Reference 
 ```bibtex
