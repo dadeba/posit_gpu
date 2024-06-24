@@ -37,19 +37,19 @@ $ export OPENCL_GEMM_BLOCKSIZE=16
 The performance of all programs can vary slightly depending on the blocking size.
 
 ## GEMM
- *run_gemm
- *un_gemm_trailing
+- run_gemm
+- run_gemm_trailing
 
 ## LU decomposition
- *run_lu
- *run_lu_bench
- *run_lu_check
- *run_lu_power_bench
+- run_lu
+- run_lu_bench
+- run_lu_check
+- run_lu_power_bench
 
 ## Cholesky decomposition
- *run_cho 
- *run_cho_bench*
- *run_cho_check*
+- run_cho 
+- run_cho_bench
+- run_cho_check
 
 # Reference 
 ```bibtex
